@@ -20,3 +20,5 @@ Route::get('test',function (){
 Route::get('hello',function (){
     return "hello is displayed";
 });
+
+Route::get('Facebook-Plugin','FacebookPluginController@index');
