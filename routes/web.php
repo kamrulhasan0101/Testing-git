@@ -14,8 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('test',function (){
-    return "hello world";
+Route::get('tests/{test}',function ($test){
+    $testd=[
+        'hello'=>"hello",
+        'hi'=>"hi"
+    ];
+    if(!array_key_exists($test,$testd)){
+        abort(404);
+    }
+    return $testd[$test];
 });
 Route::get('hello',function (){
     return "hello is displayed";
