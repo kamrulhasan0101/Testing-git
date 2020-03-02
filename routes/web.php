@@ -24,8 +24,4 @@ Route::get('tests/{test}',function ($test){
     }
     return $testd[$test];
 });
-Route::get('hello',function (){
-    return "hello is displayed";
-});
-
 Route::get('Facebook-Plugin','FacebookPluginController@index');
