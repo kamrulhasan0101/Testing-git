@@ -25,3 +25,8 @@ Route::get('tests/{test}',function ($test){
     return $testd[$test];
 });
 Route::get('Facebook-Plugin','FacebookPluginController@index');
+
+
+Route::resources([
+    'articles' => 'ArticleController',
+]);
