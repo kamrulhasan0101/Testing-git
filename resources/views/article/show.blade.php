@@ -11,7 +11,8 @@
                     <h5 class="card-title">{{$article->title}}</h5>
                     <p class="card-text">{{$article->excerpt}}</p>
                     <p class="card-text">{{$article->body}}</p>
-                    <a href="#" class="btn btn-info">Written by : {{$article->user->name}}</a>
+                    <a href="#" class="btn btn-outline-info">Written by : {{$article->user->name}}</a><br>
+                    <a href="{{route('articles.index')}}" class="btn btn-dark m-1">Back to Articles</a>
                 </div>
                 <div class="card-footer text-muted">
 
