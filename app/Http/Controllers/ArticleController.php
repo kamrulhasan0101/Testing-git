@@ -11,8 +11,8 @@ class ArticleController extends Controller
     /* Show the list of resource */
     public function index()
     {
-       $articles= Article::all();
-       return view('article.index',['articles'=>$articles]);
+//        dd(Article::latest()->take(3)->get());
+       return view('article.index',['articles'=>Article::all()]);
     }
 
     /* Show the form for creating a new resource */
@@ -31,9 +31,9 @@ class ArticleController extends Controller
     {
        Article::create($request->validate([
            'user_id'=> 'required',
-           'title'=>'required',
-           'excerpt'=>'required',
-           'body'=>'required',
+           'title'=>'required|max:25|String',
+           'excerpt'=>'required|max:50|String',
+           'body'=>'required|max:255|String'
        ]));
        return redirect('/articles');
 
@@ -47,7 +47,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+      return  view('article.show',['article'=> $article]);
     }
 
     /**

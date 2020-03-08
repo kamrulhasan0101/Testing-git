@@ -12,9 +12,7 @@
 
 </head>
 <body class="text-center" style="padding: 20px;background-color: #C6C8CA">
-<h1 class="text-muted">
-    Welcome to Odvut World!
-</h1>
+
 @yield('content')
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 </body>
